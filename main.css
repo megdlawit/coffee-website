@@ -1,0 +1,350 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+  scroll-behavior: smooth;
+  font-size: 17px;
+}
+:root {
+  --blue: #9abec1;
+  --black: #333030;
+  --red: #e92424;
+}
+/* .container{
+  padding: 0 5rem;
+} */
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  position: absolute;
+  width: 80%;
+  top: 0;
+  z-index: 2;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: green;
+}
+.logo .dot {
+  display: inline-block;
+  height: 0.5rem;
+  width: 0.5rem;
+  margin: 0.2rem;
+  background: var(--black);
+  border-radius: 50%;
+}
+.nav-links {
+  display: flex;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+a:hover {
+  color: var(--blue);
+}
+.nav-links a::after {
+  content: "";
+  display: block;
+  height: 3px;
+  background: var(--blue);
+  width: 0%;
+  transition: all ease-in-out 300ms;
+}
+.nav-links a:hover::after {
+  width: 100%;
+}
+.nav-links a:last-child {
+  margin-right: 0rem;
+}
+.nav-links .active {
+  color: var(--blue);
+}
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--red);
+  background: linear-gradient(
+    90deg,
+    rgba(52, 1, 11, 1) 0%,
+    rgba(121, 9, 9, 1) 36%,
+    rgba(255, 0, 0, 1) 100%
+  );
+}
+::-webkit-scrollbar-track {
+  background: #e4a576;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: radial-gradient(
+    circle,
+    rgba(52, 1, 11, 1) 0%,
+    rgba(121, 9, 9, 1) 36%,
+    rgba(255, 0, 0, 1) 100%
+  );
+}
+::-webkit-scrollbar-button {
+  display: none;
+}
+/* Hero */
+.hero {
+  background: var(--blue);
+  padding: 5rem 10% 0rem 10%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.hero-bg {
+  background: var(--black);
+  width: 65rem;
+  height: 37rem;
+  border-radius: 20rem;
+  transform: rotate(-45deg);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  z-index: 0;
+  right: -15.3rem;
+  top: -10rem;
+}
+.hero-bg img {
+  transform: rotate(45deg);
+  height: 35rem;
+  margin-left: 7rem;
+  margin-bottom: 0rem;
+}
+.hero .intro {
+  position: absolute;
+  margin-bottom: 7rem;
+  z-index: 1;
+}
+.hero .intro h1 {
+  font-size: 70px;
+}
+.hero .intro h2 {
+  margin: 1rem 0;
+  font-size: 35px;
+}
+.hero .intro button {
+  background: var(--red);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 0.7rem 1rem;
+  border-radius: 3px;
+  box-shadow: 10px 10px 24px -1px rgba(123, 123, 123, 0.75);
+}
+.scroll {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 2rem;
+  z-index: 2;
+}
+.scroll a {
+  color: var(--black);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.scroll a:hover {
+  color: var(--black);
+}
+.scroll .svg {
+  margin-right: 0.5rem;
+}
+/* brands */
+.brands {
+  min-height: 100vh;
+  padding: 7rem 10%;
+  position: relative;
+  overflow: hidden;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10rem;
+}
+.brand:last-child {
+  margin-bottom: 0rem;
+}
+.brand h2 {
+  font-size: 60px;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+.brand img {
+  height: 15rem;
+}
+.brand .img {
+  flex: 1;
+}
+.brands .desc {
+  flex: 1;
+}
+.row-reverse {
+  flex-direction: row-reverse;
+}
+.brand.row-reverse .img {
+  display: flex;
+  justify-content: flex-end;
+}
+.brands .bottom-img {
+  position: absolute;
+  right: -15rem;
+  bottom: -4rem;
+  z-index: 2;
+}
+/* Footer */
+footer {
+  color: white;
+  background: var(--black);
+  padding: 3rem 0;
+  text-align: center;
+}
+footer .logo {
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+footer .logo .dot {
+  background: var(--blue);
+}
+footer h3 {
+  color: var(--blue);
+  margin-bottom: 0.5rem;
+}
+footer p {
+  width: 50%;
+  margin: 0 auto 1rem auto;
+  color: rgb(156, 156, 156);
+}
+footer .social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--blue);
+  margin-right: 0.5rem;
+}
+footer .social a:last-child {
+  margin-right: 0;
+}
+footer .social svg {
+  color: white;
+}
+#check,
+.menu {
+  display: none;
+}
+/* Responsive */
+/* @media (max-width: 375px) { */
+@media (max-width: 750px) {
+  /* Nav */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgb(20, 20, 20);
+    padding: 2rem;
+    right: -250px;
+    transition: all ease-in-out 500ms;
+    z-index: 98;
+  }
+  .nav-links a {
+    display: inline-block;
+    margin: 0;
+  }
+  .menu {
+    cursor: pointer;
+    background: var(--black);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 2.5rem;
+    z-index: 99;
+  }
+  #check:checked ~ .nav-links {
+    right: 0;
+  }
+
+  /* Hero */
+  .hero .intro{
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    justify-content: space-around;
+    text-align: center;
+  }
+  .hero .intro h1 {
+    font-size: 50px;
+  }
+  .hero .intro h2 {
+    font-size: 25px;
+  }
+  .hero-bg{
+    width: 32rem;
+    height: 12rem;
+    right: -13rem;
+    top: 14rem;
+  }
+  .hero-bg img{
+    height: 14rem;
+    margin-left: 2rem;
+  }
+  /* brands */
+  .brand{
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 5rem;
+  }
+  .brand h2{
+    font-size: 25px;
+  }
+  .brand img{
+    height: 9rem;
+    margin-bottom: 2rem;
+  }
+  .brands .bottom-img{
+    right: -17rem;
+    bottom: -9rem;
+  }
+  /* Footer */
+  footer p {
+    width: 80%;
+  }
+}
